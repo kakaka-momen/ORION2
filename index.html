@@ -8,7 +8,11 @@
     <link rel="icon" href="homehome.png" type="image/png">
     <style>
         html{
-            background-color: #152e05;
+            background-image: url(angel1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%; 
+            width: 100vw;
+            height: 100vh;
             font-family: cursive;
         }
         h1{
@@ -20,17 +24,59 @@
         a:hover {
             color: #ff4d00;
         }
-        div {
-            width: 150px;
-            height: 150px;
-            background-color: #239f11;
+        #fo {
+            background-color: #53931f;
+            color: #ffa680;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;          /* 画面の中央に配置 */
+            padding: 5px;
+            box-sizing: border-box;  /* paddingを含めて幅を計算させる */
+        }
+        #su {
+            margin: 0 auto;          /* 画面の中央に配置 */
+        }
+        textarea {
+            background-color: #53931f;
+            color: #ffa680;
+            outline: 2px solid #ffa680;
+            width: 100%;
+            height: 15em;
+            margin: 0 auto;
+        }
+        textarea:focus {
+            outline: 3px solid #ff4d00;
+        }
+        #arc{
+            aspect-ratio: auto;
+            width: 200px;
+            height: 100px;
+            transform: scaleX(-1);
         }
     </style>
 </head>
 <body>
     <h1 style="text-align:center">START PAGE DAYO</h1>
-    <p><a href="http://https://ffa-edo.com/ja/status"><img src="icon1.png" alt="江戸オンライン"></a>
-    <a href="https://claude.ai/new"><img src="icon2.png" alt="Claude"></a></p>
-    
-</body>
+    <form action="http://www.google.co.jp/search" method="get">
+    <input type="search" id="fo"><br>
+    <p><a href="https://www.youtube.com/feed/you"><img src="icon7.png" alt="YouTube"></a>
+    <a href="https://claude.ai/new"><img src="icon2.png" alt="Claude"></a>
+    <a href="https://chatgpt.com"><img src="icon3.png" alt="GPT"></a>
+    <a href="https://gemini.google.com/app?hl=ja"><img src="icon4.png" alt="Gemini"></a>
+    <a href="https://mail.google.com/mail/u/0/#all"><img src="icon5.png" alt="G-Mail"></a>
+    <a href="https://drive.google.com/drive/home"><img src="icon6.png" alt="G-Drive"></a>
+    <a href="http://https://ffa-edo.com/ja/status"><img src="icon1.png" alt="江戸オンライン"></a>
+    <a href="https://kakaka-momen.github.io/syumi/syumi-text-editor"><img src="icon8.png" alt="シュミテキストEditor"></a>
+    <a href="https://x.com/home?lang=ja"><img src="icon9.png" alt="Twitter"></a>
+    <a href="https://omocoro.jp"><img src="icon10.png" alt="オモコロ"></a>
+    <img src="neko-arc.gif" alt="arc" id="arc"></p>
+    <textarea name="" id="memomo"></textarea>
+    <script>
+    const memoarea = document.getElementById('memomo');
+
+    textarea.value = localStorage.getItem('draft') ?? '';
+    textarea.addEventListener('input', () => {
+    localStorage.setItem('draft', textarea.value);
+});</script>
+    </body>
 </html>
