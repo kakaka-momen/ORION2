@@ -25,7 +25,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(an
         a:hover {
             color: #ff4d00;
         }
-        #fo {
+        .fo {
             background-color: #152e05;
             color: #ffa680;
             width: 100%;
@@ -34,7 +34,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(an
             padding: 5px;
             box-sizing: border-box;  /* paddingを含めて幅を計算させる */
         }
-        #fo:hover {
+        .fo:hover {
             outline: 3px solid #ff4d00;
             background-color: #53931f;
         }
@@ -63,20 +63,26 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(an
 </head>
 <body>
     <h1 style="text-align:center">START PAGE DAYO</h1>
-    <form action="https://www.google.co.jp/search">
-    <input type="search" name="q" id="fo" autofocus></form>
     <p><a href="https://www.youtube.com/feed/you"><img src="icon7.png" alt="YouTube"></a>
     <a href="https://claude.ai/new"><img src="icon2.png" alt="Claude"></a>
     <a href="https://chatgpt.com"><img src="icon3.png" alt="GPT"></a>
     <a href="https://gemini.google.com/app?hl=ja"><img src="icon4.png" alt="Gemini"></a>
     <a href="https://mail.google.com/mail/u/0/#all"><img src="icon5.png" alt="G-Mail"></a>
     <a href="https://drive.google.com/drive/home"><img src="icon6.png" alt="G-Drive"></a>
-    <a href="https://https://ffa-edo.com/ja"><img src="icon1.png" alt="江戸オンライン"></a>
+    <a href="https://ffa-edo.com/ja/status"><img src="icon1.png" alt="江戸オンライン"></a>
     <a href="https://kakaka-momen.github.io/syumi/syumi-text-editor"><img src="icon8.png" alt="シュミテキストEditor"></a>
     <a href="https://x.com/home?lang=ja"><img src="icon9.png" alt="Twitter"></a>
     <a href="https://omocoro.jp"><img src="icon10.png" alt="オモコロ"></a>
     <img src="neko-arc.gif" alt="arc" id="arc"></p>
     <textarea name="" id="memomo"></textarea>
+<form action="https://www.google.co.jp/search">
+<input type="search" name="q" class="fo"></form>
+<form action="https://search.yahoo.co.jp/search">
+<input type="search" name="p" class="fo"></form>
+<form action="https://www.startpage.com/sp/search" method="get">
+<input type="search" name="query" class="fo"></form>
+<form action="https://duckduckgo.com/">
+<input type="search" name="q" class="fo"></form>
     <script>
     const memoarea = document.getElementById('memomo');
 
